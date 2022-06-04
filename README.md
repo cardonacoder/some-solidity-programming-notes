@@ -131,3 +131,26 @@ An **array** can be defined like this:
 
 See "structs_arrays.sol" file for examples
 
+## Basic Solidity Memory, Storage & calldata
+
+EVM Overview (What EVM stands for?)
+Ethereum Virtual Machine. Any BC that implements EVM will be compatible, like Avalanche, Fantom, Polygon
+
+EVM can access and stire information in six places:
+
+1. Stack
+2. Memory, Means that the variable only exist temporaly during some transaction when a Fx is called and the variable can be modified
+3. Storage, This variables exist even outside of just de Fx executed. The variable can be Modified
+4. Calldata, Means that the variable only exist temporaly during some transaction when a Fx is called and the variable can't be modified
+5. Code
+6. Logs
+
+Arrays (A String is like an array), structs and mapping are considered special types
+
+## Mappings
+
+The mapping structure is like this:
+
+mapping(dataType1 =>  dataType2) public variableName;
+
+See "structs_arrays.sol" file for examples
