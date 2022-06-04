@@ -108,8 +108,26 @@ Specified range
 6. Compile
 7. Deploy
 
-
 ## Funcions types
 
-***View*** functions disallow BC changes
-***Pure*** fx disallow BC changes and read states
+**View** functions disallow BC changes
+**Pure** fx disallow BC changes and read states
+
+## Structs and arrays
+
+A Struct is like a OOP class or a user-defined data type and can be declared like:
+
+    ```solidity
+    struct struct_Name{
+        property_type property_1_Name;
+        ...
+        property_type property_n_Name;
+    }
+    ```
+
+An **array** can be defined like this:
+
+```dataType[] varName```
+
+See "structs_arrays.sol" file for examples
+
