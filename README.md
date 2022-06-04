@@ -1,17 +1,53 @@
 # some-solidity-programming-notes
 
-Descentralized apps or Dapps for short run on a P2P network
-SC run when certain condition are met
+Chainlink hackathon: Blockchain dev competition
+
+## Blockchain 🎲🔗 Basics
+
+### Blockchain first uses - Bitcoin
+
+Bitcoin was some of the first protocols that uses blockchain. On the Bitcoin White paper «Satoshi Nakamoto» described how Bitcoin can make peer to peer transactions in a decentralized network. This netword was powered by cryptography and decentrality that allows people to engage a censorship resistant finance in a decentralized manner. Due to its features peopleo took to this as a superior digital store of value, a better store of value over something like gold, for example, and thats why people commonly refers to it as a digital gold. There's a sacerce amount or a set amount of bitcoin avaialable.
+
+### far more with blockchain technology
+
+Vitalik Buterin releases a new withe papper for a new protocol named ETHEREUM, which uses the same blockchain infrastructure with additional features, like decentralized organizations and decentralized agreements or Smart Contracts.
+
+The Smart Contract term it was initially defined by Nick Szabo and he defined like «set of instructions executed in a decentralized way without the need for a centralized or third party intermediary»
+
+Bitcoin vs ETH
+Store of value vs Store of value and utility
+
+When a SC is created for replace a non-digital agreement, the SC will need data from a non-blockchain source. But blockchain by themself can't interact, read or listen data from that source, so due to SC  need extenernal data and computation it is when BC Oracle comes into play.
+
+BC Oracle
+Is any devic that interacts with the off-chain world to provide external data or computation to smart contracts. To maintain the decentralized principle that governs SC, a decentralized Oracle Network is needed. The protocol that makes DON its called chainlink
+
+Hybrid Smart Contracts
+Are SC contracts that have on-chain and off-chain agreements
+
+🎲🔗 is a deterministic system (Whats does it means?)
+
+Dapp = Decentralized Application = Decentralized Protocol = Smart Contract
+
 Logic on SC are inmutable once deployed (Backend)
-Vitalik Buterin: ETH creator
-NIck Szabo: Self executing set of instructions that execute without 3th parties 🙎🏻‍♂️
+
+Web123...
+
+What problem does this tech solves?
+Create trust minimized agreements or «Unbreakable promises or agreements» and give speed, efficiency and transparency
+
+Nick Szabo: Self executing set of instructions that execute without 3th parties 🙎🏻‍♂️
 
     Solidity Smart Contract = CODE FX           +         DATA
                             /     \                         |
                         (Setters & Getters)             States that recides at specific address on the Eth Blockchain
 
 Sol variables initialize in 0
-Deploy, execution and transactions consume gas or eth
+⚠️ Deploy, execution and transactions consume gas or eth ⚠️
+default visibility is internal
+
+Blue button means show output, and doesn't spend gas
+Orange button means input
 
 ## Some data-types
 
@@ -47,11 +83,20 @@ Its like a Hash table, maps addresses onto UInt
 
 ## Basic steps for dev a SSC
 
-1. Sol version
+1. Create a .sol file
+2. Add SPDX-Licence-identifier
+This is optional but some compilers would show a warning message and makes code sharing more easier
 
-        pragma solidity >0.7.0 <0.9.0
+        //SPDX-Licence-identifier: MIT
+3. Define Solidity version
+Only specified version
+``pragma solidity 0.7.0;``
+Specified version and above
+``pragma solidity ^0.8.8;``
+Specified range
+``pragma solidity >=0.7.0 <0.8.0;``
 
-2. Define contract (Like a Class)
+4. Define contract (Like a Class)
 
         contract contract_Name{
 
@@ -59,4 +104,12 @@ Its like a Hash table, maps addresses onto UInt
 
         }
 
-3. Define Setters and Getters
+5. Define Setters and Getters
+6. Compile
+7. Deploy
+
+
+## Funcions types
+
+***View*** functions disallow BC changes
+***Pure*** fx disallow BC changes and read states
